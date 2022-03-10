@@ -13,7 +13,8 @@ function RUNTASK(trialName, varargin)
 %       nolabJack          Does not send triggers or shocks, but waits for scanner, only for trouble shooting
 %
 % TrialsFiles are .csv-files found in the trialfiles folder. Choose one of
-% those. That is A, B, C, D, or E. TrialsFile should be written without the .csv extension
+% those. That is A, B, C, D, E or Z. Please note Z option is extended 1.5x.  
+% TrialsFile should be written without the .csv extension.
 % 
 % Example: RUNTASK('A')
 % 
@@ -31,7 +32,7 @@ scanner =1;
 
 %% Check arguments, turn off scanner sync and/or labJack if requested  
 narginchk(1,3)
-legalTrialNames = {'A', 'B', 'C', 'D', 'E'};
+legalTrialNames = {'A', 'B', 'C', 'D', 'E', 'Z'};
 if isempty(find(strcmp( legalTrialNames, trialName )));
     help RUNTASK.m
     return
